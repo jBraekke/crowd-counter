@@ -5,8 +5,15 @@ import { join } from "path";
 
 import connectToDb from "./server/controller/init/connect-db";
 import bootstrapDb from "./server/controller/init/bootstrap-db";
-import { setCool, setEger, validateCar } from "./server/controller/car-validation/post-car-validation";
-import { getParkingZones, getUsers } from "./server/controller/parking-zones/parking-zones";
+import {
+  setCool,
+  setEger,
+  validateCar,
+} from "./server/controller/car-validation/post-car-validation";
+import {
+  getParkingZones,
+  getUsers,
+} from "./server/controller/parking-zones/parking-zones";
 import { initiateAccredidationSession } from "./server/controller/accreditation-session/post-accreditation-session";
 import { initiateSocket } from "./server/webSocket/ws";
 
@@ -31,14 +38,18 @@ app.get("/api/users", (req: Request, res: Response) => {
 });
 
 app.get("/api/enable-awesomeness", (req: Request, res: Response) => {
-  socket.emit("enable-awesomeness");
-  res.send(200);
+  console.log(req.headers)
+  if (req.headers["x-factor"] === "1337") {
+    socket.emit("enable-awesomeness");
+    res.send(200);
+  } else {
+    res.send(400);
+  }
 });
 
 app.post("/api/car-validation", async (req: Request, res: Response) => {
   await validateCar(req, res);
   socket.emit("validated-car");
-
 });
 
 app.post("/api/set-eger", async (req: Request, res: Response) => {

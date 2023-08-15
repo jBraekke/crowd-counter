@@ -61,7 +61,13 @@ function Accreditation() {
 
   const handleAwesomeness = async (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    fetch('/api/enable-awesomeness')
+
+    await fetch("/api/enable-awesomeness", {
+      method: "GET",
+      headers: { "Content-Type": "application/json", "x-factor": localStorage.getItem('factor') || "" },
+    });
+
+    fetch('')
   };
 
   return (
@@ -70,7 +76,7 @@ function Accreditation() {
         <Checkmark hidden={statusIndicator} />
       </div>
       <div className="card-container">
-        <Card title="Good" subTitle="😌">
+        <Card title={`Good (${users.filter(x => x.status === UserStatusEnum.Idle).length})`} subTitle="😌">
           <ul>
             {users
               .filter((x) => x.status === UserStatusEnum.Idle)
@@ -79,7 +85,7 @@ function Accreditation() {
               ))}
           </ul>
         </Card>
-        <Card title="Bad" subTitle="😲">
+        <Card title={`Bad (${users.filter(x => x.status === UserStatusEnum.Eger).length})`} subTitle="😲">
           <ul>
             {users
               .filter((x) => x.status === UserStatusEnum.Eger)
@@ -88,7 +94,7 @@ function Accreditation() {
               ))}
           </ul>
         </Card>
-        <Card title="Awesome" subTitle="🤑">
+        <Card title={`Awesome (${users.filter(x => x.status === UserStatusEnum.Cool).length})`} subTitle="🤑">
           <ul>
             {users
               .filter((x) => x.status === UserStatusEnum.Cool)
