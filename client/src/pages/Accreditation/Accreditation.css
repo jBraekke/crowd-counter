@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+  .card-container{
+    flex-direction: column;
+  }
+
+  .center-stuff{
+    flex-wrap: wrap;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.pull-right{
+  margin-left: auto;
+}
+
+.flex--justify {
+  justify-content: center;
+  padding-top: 20px;
+  column-gap: 20px;
+}
+.card-container {
+  margin-top: 25px;
+  display: flex;
+  column-gap: 20px;
+}
+
+.tasks-solved {
+  text-align: center;
+}
+
+.tasks-solved span {
+  margin-top: 8px;
+  font-size: 2.4rem;
+  border: 4px solid #404a52;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 50px;
+  line-height: 50px;
+}
+
+.arrow-container {
+  height: 25px;
+}
+
+.center-text {
+  align-self: center;
+}

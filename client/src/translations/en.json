@@ -1,0 +1,21 @@
+{
+  "common": {
+    "navbar": {
+      "home": "Home",
+      "diviations": "Deviations",
+      "approved": "Approved",
+      "declined": "Declined",
+      "search": "Search"
+    },
+    "header": {
+      "title": "Deviation system"
+    },
+    "home": {
+      "welcome" : {
+        "title": "Good morning, {{name}}",
+        "last": "last",
+        "hours": "hours"
+      }
+    }
+  }
+}

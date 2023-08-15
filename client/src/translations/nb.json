@@ -1,0 +1,21 @@
+{
+  "common": {
+    "navbar": {
+      "home": "Forside",
+      "diviations": "Avvik",
+      "approved": "Godkjent",
+      "declined": "Avslått",
+      "search": "Søk"
+    },
+    "header": {
+      "title": "Avvikssystem"
+    },
+    "home": {
+      "welcome" : {
+        "title": "Good morgen, {{name}}",
+        "last": "siste",
+        "hours": "timer"
+      }
+    }
+  }
+}

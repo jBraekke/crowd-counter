@@ -1,0 +1,42 @@
+{
+  "name": "v-park",
+  "version": "1.0.0",
+  "description": "Et parkeringssystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "postinstall": "tsc && cd client/ && npm install && npm run build",
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "author": "Jørgen H. Brække",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.36",
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3",
+    "socket.io": "^4.5.2",
+    "dotenv": "^16.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jBraekke/deviator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jBraekke/deviator/issues"
+  },
+  "homepage": "https://github.com/jBraekke/deviator#readme",
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=16.0.0 <17.0.0"
+  }
+}

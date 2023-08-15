@@ -1,0 +1,67 @@
+@media only screen and (max-width: 600px) {
+  .welcome-card{
+    flex-direction: column;
+  }
+
+  .welcome-card h1{
+    font-size: larger;
+  }
+
+  .welcome-card .center{
+    width: auto;
+    align-self: auto;
+    padding-bottom: 15px;
+  }
+
+  .swing-container{
+    display: none;
+  }
+}
+
+.welcome-card {
+  background-color: #dee1e6;
+  display: flex;
+  padding: 15px;
+}
+
+.center {
+  align-self: center;
+}
+
+.vertical-devider {
+  width: 1px;
+
+  margin: 0px 30px;
+  background-color: #8d9092;
+}
+
+.pending-tasks {
+  display: flex;
+  padding-top: 10px;
+  font-size: 1.3rem;
+  column-gap: 10px;
+}
+
+.swing-container {
+  padding-right: 40px;
+  margin-left: auto;
+}
+
+.swing {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  margin-top: -15px;
+}
+.swing img {
+  display: block;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}

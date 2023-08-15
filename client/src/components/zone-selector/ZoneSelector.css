@@ -1,0 +1,9 @@
+button {
+  font-size: 1.2rem;
+}
+
+.btn-selected {
+  background: #333941;
+  border-color: #333941;
+  color: #fff;
+}

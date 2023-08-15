@@ -1,0 +1,21 @@
+.price-container {
+  display: flex;
+  background-color: white;
+  margin-bottom: 10px;
+  min-height: 90px;
+  align-items: center;
+}
+
+.price-container > div{
+    padding: 0px 15px;
+}
+
+.price-name {
+    flex: 2;
+    text-align: left;
+}
+
+.price-context {
+    flex: 1;
+    text-align: right;
+}
